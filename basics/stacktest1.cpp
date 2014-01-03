@@ -1,16 +1,25 @@
 #include "MyStack.h"
-#include <stdio.h>
+#include <string>
+#include <iostream>
 
 int main()
 {
-	Stack<int> s;
+	try	{
+		Stack<int> intStack;
+		Stack<std::string> stringStack;
 
-	s.push(100);
+		intStack.push(100);
+		std::cout << intStack.top() << std::endl;
 
-	printf("%d\n", s.top());
+		stringStack.push("hello");
+		std::cout << stringStack.top() << std::endl;
+		stringStack.pop();
+		stringStack.pop();
 
-	s.pop();
-
-	printf("%d\n", s.empty());
-	return 0;
+		return 0;
+	}
+	catch (std::exception const& ex) {
+		std::cerr << "Exception: " << ex.what() << std::endl;
+		return 1;
+	}
 }
