@@ -1,0 +1,17 @@
+cc=g++
+CFLAGS=-c -Wall
+
+BIN=stacktest
+OBJS=stacktest1.o
+
+all: $(BIN)
+
+$(BIN): $(OBJS)
+			g++ $(OBJS) -o $(BIN)
+
+stacktest1.o: stacktest1.cpp stack.h stack2.h
+			$(CC) $(CFLAGS) stacktest1.cpp
+
+clean:
+	del *.o $(BIN)
+

@@ -1,6 +1,6 @@
-#include "MyStack.h"
 #include <string>
 #include <iostream>
+#include "stack2.h"
 
 int main()
 {

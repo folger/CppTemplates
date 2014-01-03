@@ -14,18 +14,18 @@ public:
 	void push(T const&);
 	void pop();
 	T top() const;
-	bool empty() const { return elems.empty(); }
+	bool empty() const {
+		return elems.empty();
+	}
 };
 
 template <typename T>
-void Stack<T>::push(T const& elem)
-{
+void Stack<T>::push(T const& elem) {
 	elems.push_back(elem);
 }
 
 template <typename T>
-void Stack<T>::pop()
-{
+void Stack<T>::pop() {
 	if ( empty() )
 	{
 		throw std::out_of_range("Stack<>::pop: empty stack");
@@ -35,8 +35,7 @@ void Stack<T>::pop()
 }
 
 template <typename T>
-T Stack<T>::top() const
-{
+T Stack<T>::top() const {
 	if ( empty() )
 	{
 		throw std::out_of_range("Stack<>::pop: empty stack");
