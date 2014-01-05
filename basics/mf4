@@ -1,0 +1,17 @@
+cc=g++
+CFLAGS=-c -Wall
+
+BIN=stacktest4
+OBJS=stacktest4.o
+
+all: $(BIN)
+
+$(BIN): $(OBJS)
+			g++ $(OBJS) -o $(BIN)
+
+stacktest4.o: stacktest4.cpp stack4.h
+			$(CC) $(CFLAGS) stacktest4.cpp
+
+clean:
+	rm *.o $(BIN).exe
+

@@ -9,7 +9,7 @@ all: $(BIN)
 $(BIN): $(OBJS)
 			g++ $(OBJS) -o $(BIN)
 
-stacktest1.o: stacktest1.cpp stack.h stack2.h
+stacktest1.o: stacktest1.cpp stack.h stack2.h stack3.h
 			$(CC) $(CFLAGS) stacktest1.cpp
 
 clean:
