@@ -1,7 +1,9 @@
+#pragma once
+
 #include <deque>
 #include <string>
 #include <iostream>
-#include "stack.h"
+#include "stack3.h"
 
 template <>
 class Stack<std::string> {

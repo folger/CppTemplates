@@ -5,7 +5,7 @@
 int main()
 {
 	try	{
-		Stack<int> intStack;
+		Stack<int, std::deque<int> > intStack;
 		Stack<std::string> stringStack;
 
 		intStack.push(100);
