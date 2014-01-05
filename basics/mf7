@@ -1,16 +1,16 @@
 cc=g++
 CFLAGS=-c -Wall
 
-BIN=stacktest6
-OBJS=stacktest6.o
+BIN=stacktest7
+OBJS=stacktest7.o
 
 all: $(BIN)
 
 $(BIN): $(OBJS)
 			g++ $(OBJS) -o $(BIN)
 
-stacktest6.o: stacktest6.cpp stack6.h
-			$(CC) $(CFLAGS) stacktest6.cpp
+stacktest7.o: stacktest7.cpp stack7.h
+			$(CC) $(CFLAGS) stacktest7.cpp
 
 clean:
 	rm *.o $(BIN).exe
